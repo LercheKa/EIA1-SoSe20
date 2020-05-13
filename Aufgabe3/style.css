@@ -14,6 +14,12 @@ h1{
     bottom: 410px;
 }
 
+.circle{
+    position: static;
+    display: block;
+    margin: -35px auto;
+    width: 700px;
+}
 
 .navi{
     display: inline-block;
@@ -50,6 +56,11 @@ a:link, a:visited {
 div a.activePage1{
      color: #f3c6b1;
      font-weight: bolder;
+}
+div a.activePage2{
+    color: #f3c6b1;
+    font-weight: bolder;
+    border-right: solid 1px white;
 }
 
 .social{
@@ -129,9 +140,3 @@ div a.activePage1{
     bottom: 470px;
 }
 
-.circle{
-    position: static;
-    display: block;
-    margin: -35px auto;
-    width: 700px;
-}
