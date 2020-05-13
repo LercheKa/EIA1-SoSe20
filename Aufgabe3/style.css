@@ -1,0 +1,137 @@
+body{
+    background-image: url("bg.png");
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+h1{
+    font-size: 160px;
+    background-image: url("bg.png");
+    background-clip: text;
+     -webkit-background-clip: text;
+     color: transparent;
+    letter-spacing: -17px;
+    position: relative;
+    bottom: 410px;
+}
+
+
+.navi{
+    display: inline-block;
+    background-color: #000000;
+    padding: 5px 5px 5px 5px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    border-radius: 0px 0px 10px 10px;
+    z-index: 9999;
+}
+.navi1{
+    border-right: solid 1px white;
+}
+
+.navi2{
+    border-right: solid 1px white;
+}
+
+a:link, a:visited {
+        text-decoration: none;
+        color: white;
+}
+ a:hover {
+    color: #f3c6b1;
+ }
+
+ a.active{
+     color: #f3c6b1;
+     text-decoration: underline;
+ }
+
+
+div a.activePage1{
+     color: #f3c6b1;
+     font-weight: bolder;
+}
+
+.social{
+    position: absolute;
+    top: 270px;
+    margin-left: 48.9%;
+    z-index: 9999;
+}
+
+.social2{
+    position: absolute;
+    top: 270px;
+    margin-left: 50.9%;
+    z-index: 9999;
+}
+
+.social3{
+    position: absolute;
+    top: 270px;
+    margin-left: 52.9%;
+    z-index: 9999;
+}
+
+.social:hover{
+    opacity: 0.5;
+}
+
+.social2:hover{
+    opacity: 0.5;
+}
+
+.social3:hover{
+    opacity: 0.5;
+}
+
+.text {
+    letter-spacing: 2px;
+        background-image: url("bg.png");
+        background-clip: text;
+         -webkit-background-clip: text;
+          color: transparent;
+    margin: auto;
+    width: 15%;
+    border: 3px;
+    padding: 10px;
+    font-size: 23px;
+    text-align: left;
+    position: relative;
+    bottom: 590px;
+    left: 100px;
+    text-align:left;
+}
+
+.lorem{
+    margin: auto;
+    width: 15%;
+    border: 3px;
+    padding: 10px;
+    font-size: 10px;
+    text-align: left;
+    position: relative;
+    bottom: 625px;
+    left: 100px;
+    text-align:left;
+}
+
+.illu{
+    color: #f3c6b1;
+    font-size: 20px;
+    position: relative;
+    bottom: 480px;
+    right: 270px;
+}
+
+.foto {
+    position: relative;
+    bottom: 470px;
+}
+
+.circle{
+    position: static;
+    display: block;
+    margin: -35px auto;
+    width: 700px;
+}
