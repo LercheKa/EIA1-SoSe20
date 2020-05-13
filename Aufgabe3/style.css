@@ -94,6 +94,10 @@ div a.activePage2{
 
 .text {
     letter-spacing: 2px;
+        background-image: url("bg.png");
+        background-clip: text;
+         -webkit-background-clip: text;
+          color: transparent;
     margin: auto;
     width: 15%;
     border: 3px;
