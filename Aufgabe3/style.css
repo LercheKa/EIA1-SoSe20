@@ -52,6 +52,11 @@ a:link, a:visited {
      text-decoration: underline;
  }
 
+ a.grey {
+    text-decoration: underline;
+    color: lightgray;
+}
+
 
 div a.activePage1{
      color: #f3c6b1;
