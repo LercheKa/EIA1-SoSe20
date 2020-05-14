@@ -140,3 +140,52 @@ div a.activePage2{
     bottom: 470px;
 }
 
+.Kontakt{
+    color: #f3c6b1;
+    font-size: 19pt;
+    font-weight: bolder;
+    position: relative;
+    margin-top: -300px;
+    margin-left: 200px;
+    text-align: left;
+    
+}
+
+.formular{
+    background: lightgrey;
+    font-size: 9pt;
+    font-weight: bolder;
+    color: white;
+    width: 200px;
+    padding: 5px 5px 5px 5px;
+    margin-left: 200px;
+    text-align: left;
+}
+
+.formular2{
+    background: lightgrey;
+    font-size: 9pt;
+    font-weight: bolder;
+    color: white;
+    width: 300px;
+    padding: 5px 5px 20px 5px;
+    margin-left: 200px;
+    text-align: left;
+}
+
+.Datenschutz{
+    font-size: 7pt;
+    color: lightgray;
+    margin-left: 200px;
+    text-align: left;
+}
+
+.absenden{
+    font-size: 9pt;
+    font-weight: bolder;
+    color: white;
+    background: lightgray;
+    width: 55px;
+    padding: 5px 7px 5px 7px;
+    margin-left: 200px;
+}
