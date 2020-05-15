@@ -27,6 +27,7 @@ h1 {
     background-color: #000000;
     padding: 5px 5px 5px 5px;
     position: fixed;
+    margin-right: 250px;
     right: 0;
     top: 0;
     border-radius: 0px 0px 10px 10px;
@@ -154,7 +155,7 @@ div a.activePage2 {
     font-size: 19pt;
     font-weight: bolder;
     margin-top: -500px;
-    margin-left: 200px;
+    margin-left: 400px;
     text-align: left;
 }
 
@@ -165,7 +166,7 @@ div a.activePage2 {
     color: white;
     width: 200px;
     padding: 5px 5px 5px 5px;
-    margin-left: 200px;
+    margin-left: 400px;
     text-align: left;
 }
 
@@ -176,14 +177,14 @@ div a.activePage2 {
     color: white;
     width: 300px;
     padding: 5px 5px 20px 5px;
-    margin-left: 200px;
+    margin-left: 400px;
     text-align: left;
 }
 
 .Datenschutz {
     font-size: 7pt;
     color: lightgray;
-    margin-left: 200px;
+    margin-left: 400px;
     text-align: left;
 }
 
@@ -194,5 +195,5 @@ div a.activePage2 {
     background: lightgray;
     width: 55px;
     padding: 5px 7px 5px 7px;
-    margin-left: 200px;
+    margin-left: 400px;
 }
