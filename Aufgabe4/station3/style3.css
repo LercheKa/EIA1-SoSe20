@@ -1,0 +1,51 @@
+@font-face {
+        font-family: dear;
+        src: url(font/dear_sunshine-webfont.woff);
+      }
+      
+      
+    body{
+    font-family: dear;
+        text-align: center;
+        background-image: url(Images/wrapperbg.png), url(Images/bg.png);
+        background-repeat: no-repeat, repeat;
+        background-attachment: fixed, fixed;
+        background-position: center, center;
+    }
+    
+    
+
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-top: 150px;
+    }
+    
+    #headline{
+        display: inline-block;
+        position: absolute;
+        font-size: 20px;
+        font-weight: bolder;
+        text-align: left;
+        margin-top: 160px;
+        margin-left: 200px;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+    
+    #text{
+        display: inline-block;
+        position: absolute;
+        font-size: 25px;
+        font-weight: normal;
+        text-align: left;
+        margin-top: 330px;
+        margin-left: 225px;
+        transform: translate(-50%, -50%);
+        color: white;
+    }

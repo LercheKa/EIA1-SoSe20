@@ -1,0 +1,69 @@
+body{
+    font-family: Bahnschrift Light;
+        text-align: center;
+        background-image: url(images/wrapperbg.png), url(images/bg.png);
+        background-repeat: no-repeat, repeat;
+        background-attachment: fixed, fixed;
+        background-position: center, center;
+    }
+
+    #headline{
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40%;
+        color: whitesmoke;
+        font-weight: bold;
+    }
+    .Formular{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-top: 300px;
+        text-align: center;
+        color: whitesmoke;
+    }
+    
+    form{
+        color: white;
+        display: inline-block;
+        position: absolute;
+        margin-left: -250px;
+        margin-right: auto;
+        text-align: left;
+    }
+
+    #greetings{
+        padding: 0 200px 70px 0;
+    }
+
+    #user{
+        padding: 3px 30px 0px 0px;
+    }
+    
+    #textfeld{
+        width: 100px;
+    }
+
+    .button{
+        color: white;
+        background-color: #f3c6b1;
+        padding: 10px 10px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        width: 100px;
+        cursor: pointer;
+        border-radius: 8px;
+        display: block;
+        margin-top: 10px;
+    }
+    
+    .button:hover{
+        opacity: 0.5;
+    }

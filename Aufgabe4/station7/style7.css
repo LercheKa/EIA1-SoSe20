@@ -1,0 +1,31 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        background-image: url(images/wrapperbg.png), url(images/bg.png);
+        background-repeat: no-repeat, repeat;
+        background-attachment: fixed, fixed;
+        background-position: center, center;
+    }
+
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-top: 380px;
+    }
+
+    img[alt=Band]{
+        display: inline-block;
+        position: absolute;
+        margin-left: 180px;
+        margin-top: 130px;
+    }
+
+    .video{
+        display: inline-block;
+        position: absolute;
+    }
