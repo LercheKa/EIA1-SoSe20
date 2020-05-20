@@ -7,7 +7,7 @@
     body{
     font-family: dear;
         text-align: center;
-        background-image: url(Images/wrapperbg.png), url(Images/bg.png);
+        background-image: url(images/wrapperbg.png), url(images/bg.png);
         background-repeat: no-repeat, repeat;
         background-attachment: fixed, fixed;
         background-position: center, center;
