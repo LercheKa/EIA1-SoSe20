@@ -12,15 +12,12 @@ body{
         src: url(font/dear_sunshine-webfont.woff);
       }
 
-    .container{
+      .container{
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: auto;
-        margin-top: 150px;
+        top: 150px;
     }
     
     #headline{
