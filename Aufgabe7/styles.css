@@ -1,0 +1,34 @@
+body{
+    background-color: rgb(34, 34, 34);
+    display: block;
+    position: relative;
+    top: 100px;
+    text-align: center;
+}
+
+button{
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    border: none;
+    border-radius: 7px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+img:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#b1, #b2, #b3{
+    background-image: linear-gradient(to bottom, #db8be8, #d077dd, #c662d1, #bc4cc6, #b133ba);
+}
+
+#b4, #b5, #b6, #b7{
+    background-image: linear-gradient(to bottom, #f884ab, #f672a6, #f45fa2, #f04a9f, #ec2f9d);
+}
+
+#b8, #b9{
+    background-image: linear-gradient(to bottom, #f8c384, #f3b76e, #eeab57, #e9a03f, #e39424);
+}
