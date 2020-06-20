@@ -1,135 +1,142 @@
 body {
-    background-color: #000000 ;  
+    background-color: rgb(34, 34, 34);  
+    display: block;
+    position: relative;
+    top: 100px;
+    text-align: center;
 }
 
-.big-icon {
-    font-size: 80px;
-  }
-  
-  .hidden{
-    
-    position: fixed;
-    visibility: hidden;
-  }
-.buttons {
-    position: fixed;
-    left: 600px;
-    top: 500px;
-    color:white;
-    cursor: pointer;
-}
-.mic{
-  position: fixed;
-  left: 520px;
-  top: 500px;
-  color:white;
-  cursor: pointer;
-
-}
-
-.bin{
-  position: fixed;
-  left: 680px;
-  top: 500px;
-  color:white;
+.icons {
+  font-size: 70px;
+  color: white;
   cursor: pointer;
 }
+
+.kreis{
+position: fixed;
+left: 450px;
+top: 630px;  
+}
+.buttons{
+  position: fixed;
+  left: 610px;
+  top: 630px;
+}
+.hidden{
+  position: fixed;
+  visibility: hidden;
+}
+.delete{
+  position: fixed;
+  left: 760px;
+  top: 630px;
+}
+
 .b1{
   height: 150px;
-  width:150px;
+  width: 150px;
   position: absolute;
-  background-color:hotpink;
+  background-image: linear-gradient(to bottom, #db8be8, #d077dd, #c662d1, #bc4cc6, #b133ba);
   border-radius: 10px;
   bottom: 0px;
-  left:400px;
+  left: 400px;
   right: 0px;
   top: 10px;
+  cursor: pointer;
 }
 .b2{
     height: 150px;
-    width:150px;
+    width: 150px;
     position: absolute;
-    background-color:hotpink;
+    background-image: linear-gradient(to bottom, #db8be8, #d077dd, #c662d1, #bc4cc6, #b133ba);
     border-radius: 10px;
     bottom: 0px;
-    left:560px;
+    left: 555px;
     right: 0px;
     top: 10px;
+    cursor: pointer;
   }
   .b3{
     height: 150px;
-    width:150px;
+    width: 150px;
     position: absolute;
-    background-color:hotpink;
+    background-image: linear-gradient(to bottom, #db8be8, #d077dd, #c662d1, #bc4cc6, #b133ba);
     border-radius: 10px;
     bottom: 0px;
-    left:720px;
+    left: 710px;
     right: 0px;
     top: 10px;
+    cursor: pointer;
   }
   .b4{
     height: 150px;
-    width:150px;
+    width: 150px;
     position: absolute;
-    background-color:#87CEFA;
+    background-image: linear-gradient(to bottom, #f884ab, #f672a6, #f45fa2, #f04a9f, #ec2f9d);
     border-radius: 10px;
-    bottom:0px;
-    left:400px;
+    bottom: 0px;
+    left: 400px;
     right: 0px;
-    top: 170px;
+    top: 165px;
+    cursor: pointer;
   }
   .b5{
     height: 150px;
-    width:150px;
+    width: 150px;
     position: absolute;
-    background-color:#87CEFA;
+    background-image: linear-gradient(to bottom, #f884ab, #f672a6, #f45fa2, #f04a9f, #ec2f9d);
     border-radius: 10px;
     bottom: 0px;
-    left:560px;
+    left: 555px;
     right: 0px;
-    top: 170px;
+    top: 165px;
+    cursor: pointer;
   }
   .b6{
     height: 150px;
-    width:150px;
+    width: 150px;
     position: absolute;
-    background-color:#87CEFA;
+    background-image: linear-gradient(to bottom, #f884ab, #f672a6, #f45fa2, #f04a9f, #ec2f9d);
     border-radius: 10px;
     bottom: 0px;
-    left:720px;
+    left: 710px;
     right: 0px;
-    top: 170px;
+    top: 165px;
+    cursor: pointer;
   }
   .b7{
     height: 150px;
-    width:150px;
+    width: 150px;
     position: absolute;
-    background-color:#FFB6C1;
+    background-image: linear-gradient(to bottom, #f884ab, #f672a6, #f45fa2, #f04a9f, #ec2f9d);
     border-radius: 10px;
-    bottom:0px;
-    left:400px;
+    bottom: 0px;
+    left: 400px;
     right: 0px;
-    top: 330px;
+    top: 320px;
+    cursor: pointer;
   }
   .b8{
     height: 150px;
-    width:150px;
+    width: 150px;
     position: absolute;
-    background-color:#FFB6C1;
+    background-image: linear-gradient(to bottom, #f8c384, #f3b76e, #eeab57, #e9a03f, #e39424);
     border-radius: 10px;
     bottom: 0px;
-    left:560px;
+    left: 555px;
     right: 0px;
-    top: 330px;
+    top: 320px;
+    cursor: pointer;
   }
 .b9{
   height: 150px;
-  width:150px;
+  width: 150px;
   position: absolute;
-  background-color:#FFB6C1;
+  background-image: linear-gradient(to bottom, #f8c384, #f3b76e, #eeab57, #e9a03f, #e39424);
   border-radius: 10px;
   bottom: 0px;
-  left:720px;
+  left: 710px;
   right: 0px;
-  top: 330px;
+  top: 320px;
+  cursor: pointer;
 }
