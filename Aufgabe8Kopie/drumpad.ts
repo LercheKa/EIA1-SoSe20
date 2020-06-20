@@ -9,7 +9,7 @@ var s8: HTMLAudioElement = new Audio("assets/laugh-2.mp3");
 var s9: HTMLAudioElement = new Audio("assets/snare.mp3");
 
 var sound: HTMLAudioElement [] = [s1, s2, s3, s4, s5, s6, s7, s8, s9];
-var beatsArray: Number [] = [1, 3, 4];
+var beatsArray: Number [] = []];
 var clicked: boolean = false;
 
 function playsample (z: number) {
@@ -41,8 +41,7 @@ function record() {
 }
 
 window.addEventListener("load", function() {
-   
-    //Pad
+
     document.getElementById("b1").addEventListener("click", function() {playsample(0); });
     document.getElementById("b2").addEventListener("click", function() {playsample(1); });
     document.getElementById("b3").addEventListener("click", function() {playsample(2); });
