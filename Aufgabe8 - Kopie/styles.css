@@ -1,0 +1,135 @@
+body {
+    background-color: #000000 ;  
+}
+
+.big-icon {
+    font-size: 80px;
+  }
+  
+  .hidden{
+    
+    position: fixed;
+    visibility: hidden;
+  }
+.buttons {
+    position: fixed;
+    left: 600px;
+    top: 500px;
+    color:white;
+    cursor: pointer;
+}
+.mic{
+  position: fixed;
+  left: 520px;
+  top: 500px;
+  color:white;
+  cursor: pointer;
+
+}
+
+.bin{
+  position: fixed;
+  left: 680px;
+  top: 500px;
+  color:white;
+  cursor: pointer;
+}
+.b1{
+  height: 150px;
+  width:150px;
+  position: absolute;
+  background-color:hotpink;
+  border-radius: 10px;
+  bottom: 0px;
+  left:400px;
+  right: 0px;
+  top: 10px;
+}
+.b2{
+    height: 150px;
+    width:150px;
+    position: absolute;
+    background-color:hotpink;
+    border-radius: 10px;
+    bottom: 0px;
+    left:560px;
+    right: 0px;
+    top: 10px;
+  }
+  .b3{
+    height: 150px;
+    width:150px;
+    position: absolute;
+    background-color:hotpink;
+    border-radius: 10px;
+    bottom: 0px;
+    left:720px;
+    right: 0px;
+    top: 10px;
+  }
+  .b4{
+    height: 150px;
+    width:150px;
+    position: absolute;
+    background-color:#87CEFA;
+    border-radius: 10px;
+    bottom:0px;
+    left:400px;
+    right: 0px;
+    top: 170px;
+  }
+  .b5{
+    height: 150px;
+    width:150px;
+    position: absolute;
+    background-color:#87CEFA;
+    border-radius: 10px;
+    bottom: 0px;
+    left:560px;
+    right: 0px;
+    top: 170px;
+  }
+  .b6{
+    height: 150px;
+    width:150px;
+    position: absolute;
+    background-color:#87CEFA;
+    border-radius: 10px;
+    bottom: 0px;
+    left:720px;
+    right: 0px;
+    top: 170px;
+  }
+  .b7{
+    height: 150px;
+    width:150px;
+    position: absolute;
+    background-color:#FFB6C1;
+    border-radius: 10px;
+    bottom:0px;
+    left:400px;
+    right: 0px;
+    top: 330px;
+  }
+  .b8{
+    height: 150px;
+    width:150px;
+    position: absolute;
+    background-color:#FFB6C1;
+    border-radius: 10px;
+    bottom: 0px;
+    left:560px;
+    right: 0px;
+    top: 330px;
+  }
+.b9{
+  height: 150px;
+  width:150px;
+  position: absolute;
+  background-color:#FFB6C1;
+  border-radius: 10px;
+  bottom: 0px;
+  left:720px;
+  right: 0px;
+  top: 330px;
+}
