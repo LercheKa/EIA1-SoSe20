@@ -1,42 +1,159 @@
-body{
-    background-color: rgb(34, 34, 34);
-    display: block;
-    position: relative;
-    top: 100px;
-    text-align: center;
+body {
+  background-color: rgb(34, 34, 34);  
+  display: block;
+  position: relative;
+  top: 100px;
+  text-align: center;
 }
-
-button{
-    text-align: center;
-    width: 150px;
-    height: 150px;
-    border: none;
-    border-radius: 7px;
-    margin-bottom: 5px;
-    cursor: pointer;
-}
-
-#b1, #b2, #b3{
-    background-image: linear-gradient(to bottom, #db8be8, #d077dd, #c662d1, #bc4cc6, #b133ba);
-}
-
-#b4, #b5, #b6, #b7{
-    background-image: linear-gradient(to bottom, #f884ab, #f672a6, #f45fa2, #f04a9f, #ec2f9d);
-}
-
-#b8, #b9{
-    background-image: linear-gradient(to bottom, #f8c384, #f3b76e, #eeab57, #e9a03f, #e39424);
-}
-
-.btn {
-    background-color: transparent;
-    border: none;
-    color: white; 
-    padding: 12px 16px;
-    font-size: 70px;
-    cursor: pointer;
-  }
   
-.btn:hover {
-    opacity: 0.5;
-  }
+.icons {
+  font-size: 70px;
+  color: white;
+  cursor: pointer;
+}
+
+.fa-play {
+  position: fixed;
+  left: 610px;
+  top: 630px;
+}
+.fa-play:hover{
+  opacity: 0.5;
+}
+
+.fa-pause{
+  position: fixed;
+  left: 610px;
+  top: 630px;
+}
+.fa-pause:hover{
+  opacity: 0.5;
+}
+
+.fa-circle{
+  position: fixed;
+  left: 450px;
+  top: 630px;  
+}
+.fa-circle:hover{
+  opacity: 0.5;
+}
+
+.fa-stop{
+  position: fixed;
+  left: 760px;
+  top: 630px; 
+}
+.fa-stop:hover{
+  opacity: 0.5;
+}
+
+.button1{
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  background-image: linear-gradient(to bottom, #db8be8, #d077dd, #c662d1, #bc4cc6, #b133ba);
+  border-radius: 10px;
+  bottom: 0px;
+  left: 400px;
+  right: 0px;
+  top: 10px;
+  cursor: pointer;
+}
+.button2{
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  background-image: linear-gradient(to bottom, #db8be8, #d077dd, #c662d1, #bc4cc6, #b133ba);
+  border-radius: 10px;
+  bottom: 0px;
+  left: 555px;
+  right: 0px;
+  top: 10px;
+  cursor: pointer;
+}
+.button3{
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  background-image: linear-gradient(to bottom, #db8be8, #d077dd, #c662d1, #bc4cc6, #b133ba);
+  border-radius: 10px;
+  bottom: 0px;
+  left: 710px;
+  right: 0px;
+  top: 10px;
+  cursor: pointer;
+}
+.button4{
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  background-image: linear-gradient(to bottom, #f884ab, #f672a6, #f45fa2, #f04a9f, #ec2f9d);
+  border-radius: 10px;
+  bottom: 0px;
+  left: 400px;
+  right: 0px;
+  top: 165px;
+  cursor: pointer;
+}
+.button5{
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  background-image: linear-gradient(to bottom, #f884ab, #f672a6, #f45fa2, #f04a9f, #ec2f9d);
+  border-radius: 10px;
+  bottom: 0px;
+  left: 555px;
+  right: 0px;
+  top: 165px;
+  cursor: pointer;
+}
+.button6{
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  background-image: linear-gradient(to bottom, #f884ab, #f672a6, #f45fa2, #f04a9f, #ec2f9d);
+  border-radius: 10px;
+  bottom: 0px;
+  left: 710px;
+  right: 0px;
+  top: 165px;
+  cursor: pointer;
+}
+.button7{
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  background-image: linear-gradient(to bottom, #f884ab, #f672a6, #f45fa2, #f04a9f, #ec2f9d);
+  border-radius: 10px;
+  bottom: 0px;
+  left: 400px;
+  right: 0px;
+  top: 320px;
+  cursor: pointer;
+}
+.button8{
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  background-image: linear-gradient(to bottom, #f8c384, #f3b76e, #eeab57, #e9a03f, #e39424);
+  border-radius: 10px;
+  bottom: 0px;
+  left: 555px;
+  right: 0px;
+  top: 320px;
+  cursor: pointer;
+}
+.button9{
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  background-image: linear-gradient(to bottom, #f8c384, #f3b76e, #eeab57, #e9a03f, #e39424);
+  border-radius: 10px;
+  bottom: 0px;
+  left: 710px;
+  right: 0px;
+  top: 320px;
+  cursor: pointer;
+}
+
