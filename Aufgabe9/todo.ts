@@ -7,6 +7,7 @@ window.addEventListener("load", function () {
         for (var index = 0; index < todoitems.length; index++) {
             todofeld.innerHTML += "<div id='box'>" + "<input type='checkbox' id='checkbox'>"  + todoitems[index] + "<i class='fas fa-trash-alt'></i>" + "</div>";
         }
+        
         var total: HTMLElement = document.querySelector("#total");
         total.innerHTML = todoitems.length;
     }
