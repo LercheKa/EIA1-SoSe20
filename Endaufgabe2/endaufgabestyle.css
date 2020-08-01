@@ -1,0 +1,233 @@
+@font-face {
+    font-family: "Potra";
+    src: url("fonts/Potra.ttf");
+}
+
+body{
+    background-image: url("background.jpg");
+}
+
+h1{
+    font-family: "Potra";
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    text-align: center;
+    font-size: 90px;
+    margin-bottom: 10px;
+    margin-top: -7px;
+}
+
+footer{
+    width: 100%;
+    height: 50px;
+}
+
+.credits{
+    text-align: center;
+    font-size: 10px;
+    font-family: monospace;
+    color: whitesmoke;
+}
+
+a:link {
+    color: whitesmoke;
+    background-color: transparent;
+}
+  
+a:visited {
+    color: pink;
+    background-color: transparent;
+}
+  
+
+button{
+    cursor: pointer;
+    text-align: center;
+    font-family: monospace;
+    height: 30px;
+    width: 80px;
+    border-color: rgb(37, 1, 85);
+    border-radius: 10px;
+    margin-bottom: 20px;    
+}
+
+button:hover{
+    opacity: 70%;
+}
+
+#difficulty{
+    margin-left: 570px;
+}
+
+#difficultyeasy{
+    background-color: palegreen;
+}
+
+#difficultyadvanced{
+    background-color: rgb(235, 227, 142);
+}
+
+#difficultyhard{
+    background-color: rgb(255, 203, 107);
+}
+
+#difficultyextreme{
+    background-color: rgb(247, 108, 108);
+}
+
+#instruction{
+    color: whitesmoke;
+    text-align: center;
+    font-family: monospace;
+    position: relative;
+    font-size: 15px;
+}
+  
+p{
+    margin-top: -10px;
+    margin-left: 700px;
+    font-size: 20px;
+    font-family: monospace;
+    color: whitesmoke;
+}
+
+#turn {
+    color: whitesmoke;
+    font-family: monospace;
+    font-size: 20px;
+    height: 40px;
+    width: 60px;
+    text-align: center;
+    margin-top: -15px;
+    margin-left: 700px;
+}
+  
+#outer-circle{
+    background: rgb(37, 1, 85);
+    border-radius: 50%;
+    height: 500px;
+    width: 500px;
+    position: relative;
+    border-width: 8px;
+    border-style: solid;
+    border-color: rgb(13, 13, 66);
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    box-shadow: 0px 0px 20px 10px powderblue;
+}
+  
+#topleft{
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    border-radius: 250px 0 0 0;
+    background: rgb(255, 181, 233);
+    top: 50%;
+    left: 50%;
+    margin: -250px 0px 0px -250px;
+    border-width: 3px;
+    border-color: rgb(37, 1, 85);
+    border-style: solid;
+    box-sizing: border-box;   
+}
+
+#topleft:hover{
+    cursor: pointer;
+    opacity: 80%;
+}
+  
+#topright{
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    border-radius: 0 250px 0 0;
+    background: rgb(139, 238, 238);
+    top: 50%;
+    left: 50%;
+    margin: -250px 0px 0px 0px;
+    border-width: 3px;
+    border-color: rgb(37, 1, 85);
+    border-style: solid;
+    box-sizing: border-box; 
+}
+
+#topright:hover{
+    cursor: pointer;
+    opacity: 80%;
+}
+
+#bottomleft{
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    border-radius: 0 0 0 250px;
+    background: rgb(205, 12, 217);
+    top: 50%;
+    left: 50%;
+    margin: 0px -250px 0px -250px;
+    border-width: 3px;
+    border-color: rgb(37, 1, 85);
+    border-style: solid;
+    box-sizing: border-box;  
+}
+
+#bottomleft:hover{
+    cursor: pointer;
+    opacity: 80%;
+}
+  
+#bottomright{
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    border-radius: 0 0 250px 0;
+    background: rgb(59, 127, 238);
+    top: 50%;
+    left: 50%;
+    margin: 0px 0px -250px 0px;
+    border-width: 3px;
+    border-color: rgb(37, 1, 85);
+    border-style: solid;
+    box-sizing: border-box; 
+}
+
+#bottomright:hover{
+    cursor: pointer;
+    opacity: 80%;
+}
+#hidden-circle{
+    position: absolute;
+    background: rgb(13, 13, 66);
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    border-width: 6px;
+    top: 50%;
+    left: 50%;
+    margin: -125px 0px 0px -125px;
+    box-sizing: border-box;
+    border-color: rgb(13, 13, 66);
+    border-style: solid; 
+} 
+
+#inner-circle{
+    position: absolute;
+    background: rgb(235, 227, 142);
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    border-width: 6px;
+    top: 50%;
+    left: 50%;
+    margin: -125px 0px 0px -125px;
+    box-sizing: border-box;
+    border-color: rgb(13, 13, 66);
+    border-style: solid; 
+}
+
+#inner-circle:hover{
+    cursor: pointer;
+    opacity: 80%;
+}
+/*background: linear-gradient(180deg, rgba(255,231,0,1) 0%, rgba(250,215,68,1) 27%, rgba(237,45,253,1) 100%);*/
