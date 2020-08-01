@@ -10,7 +10,7 @@ let intervalId;
 let noise = true; //Gibt an ob die Buttons einen Ton abspielen sollen oder nicht
 let on = false; //Gibt an ob das Spiel an ist. Der Spieler soll nur klicken können wenn on, true ist.
 let win; //Gibt an ob der Spieler das Spiel gewonnen hat oder nicht
-let buttonsounds = ["Sounds/A.mp3", "Sounds/C.mp3", "Sounds/F.mp3", "Sounds/G.mp3", "Sounds/hihat.mp3", "sounds/winningsound.mp3", "sounds/failsound.mp3"];
+let buttonsounds = ["sounds/A.mp3", "sounds/C.mp3", "sounds/F.mp3", "sounds/G.mp3", "sounds/hihat.mp3", "sounds/winningsound.mp3", "sounds/failsound.mp3"];
 //Array für alle Sounds
 //Diese Booleans geben an, welcher Schwierigkeitsgrad gewählt wurde
 let easychosen;
