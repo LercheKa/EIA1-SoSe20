@@ -20,9 +20,11 @@ h1{
 footer{
     width: 100%;
     height: 50px;
+    background-color: black;
+    opacity: 80%;
 }
 
-.credits{
+.about{
     text-align: center;
     font-size: 10px;
     font-family: monospace;
@@ -63,7 +65,7 @@ button:hover{
     background-color: palegreen;
 }
 
-#difficultyadvanced{
+#difficultymedium{
     background-color: rgb(235, 227, 142);
 }
 

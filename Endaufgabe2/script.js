@@ -14,7 +14,7 @@ let buttonsounds = ["Sounds/A.mp3", "Sounds/C.mp3", "Sounds/F.mp3", "Sounds/G.mp
 //Array für alle Sounds
 //Diese Booleans geben an, welcher Schwierigkeitsgrad gewählt wurde
 let easychosen;
-let advancedchosen;
+let mediumchosen;
 let hardchosen;
 let extremechosen;
 //BUTTONSELEKTION
@@ -31,7 +31,7 @@ const reloadbutton = document.querySelector("#reload");
 const progressbar = document.querySelector(".progress-bar");
 //Für die Schwierigkeitsgradbuttons
 const diffEasy = document.querySelector("#difficultyeasy");
-const diffAdvanced = document.querySelector("#difficultyadvanced");
+const diffmedium = document.querySelector("#difficultymedium");
 const diffHard = document.querySelector("#difficultyhard");
 const diffextreme = document.querySelector("#difficultyextreme");
 //FUNKTIONEN FÜR DIE SCHWIERIGKEITSGRADE
@@ -40,19 +40,19 @@ var i;
 diffEasy.addEventListener("click", function () {
     on = true; //Das Spiel läuft
     easychosen = true;
-    advancedchosen = false;
+    mediumchosen = false;
     hardchosen = false;
     extremechosen = false;
     playeasy();
 });
 function playeasy() {
-    win = false; //Alle Variablen werden erstmal zurückgesetzt falls von vorherigen Runden noch die Reihenfolge gespeichert ist etc.
-    compOrder = []; //Array in dem die willkürliche Reihenfolge gespeichert wird ist leer
+    win = false; //Alle Variablen werden erstmal zurückgesetzt, falls von vorherigen Runden noch die Reihenfolge gespeichert ist
+    compOrder = []; //Array, in dem die Reihenfolge gespeichert wird, ist leer
     playerOrder = [];
     flash = 0; //Noch kein Button hat aufgeleuchtet
     intervalId = 0;
-    turn = 1; //Erste Runde
-    turnCounter.innerHTML = "1"; //Counter stellt sich auf 1, da erste Runde
+    turn = 1; //Erster Sound
+    turnCounter.innerHTML = "1"; //Counter stellt sich auf 1
     good = true; //der Spieler hat noch nichts falsches gedrückt
     for (i = 0; i < 5; i++) { //5 Zahlen werden erstellt
         compOrder.push(Math.floor(Math.random() * 5) + 1); // erstellt eine willkürliche Zahl zwischen eins und fünf und pusht diese Reihenfolge dann in das dafür vorgesehene Array
@@ -61,15 +61,15 @@ function playeasy() {
     intervalId = setInterval(gameTurn, 800); //die Funktion wird alle 800ms aufgerufen: Der Computer spielt einen Ton alle 800ms
 }
 //MITTEL
-diffAdvanced.addEventListener("click", function () {
+diffmedium.addEventListener("click", function () {
     on = true; //Das Spiel ist am laufen
     easychosen = false;
-    advancedchosen = true;
+    mediumchosen = true;
     hardchosen = false;
     extremechosen = false;
-    playadvanced();
+    playmedium();
 });
-function playadvanced() {
+function playmedium() {
     win = false;
     compOrder = [];
     playerOrder = [];
@@ -88,7 +88,7 @@ function playadvanced() {
 diffHard.addEventListener("click", function () {
     on = true;
     easychosen = false;
-    advancedchosen = false;
+    mediumchosen = false;
     hardchosen = true;
     extremechosen = false;
     playhard();
@@ -112,7 +112,7 @@ function playhard() {
 diffextreme.addEventListener("click", function () {
     on = true;
     easychosen = false;
-    advancedchosen = false;
+    mediumchosen = false;
     hardchosen = false;
     extremechosen = true;
     playextreme();
@@ -298,7 +298,7 @@ function check() {
     if (playerOrder.length == 5 && good && easychosen) { //Wenn nach 5 Runden vom Nutzer alles richtig gedrückt wurde und EINFACH gewählt wurde, dann ist das Spiel gewonnen
         winGame(); //Spiel gewonnen für Level EINFACH
     }
-    if (playerOrder.length == 15 && good && advancedchosen) {
+    if (playerOrder.length == 15 && good && mediumchosen) {
         winGame(); //Spiel gewonnen für Level MITTEL
     }
     if (playerOrder.length == 25 && good && hardchosen) {
@@ -332,16 +332,16 @@ function winGame() {
 }
 //FUNKTION FÜR VERLIEREN DES SPIELS
 function loseGame() {
-    flashColor(); //Alle Buttons leuchten auf
-    let sound = new Audio(buttonsounds[6]); //Sound wird abgespielt
+    flashColor();
+    let sound = new Audio(buttonsounds[6]);
     sound.play();
-    instructions.innerHTML = "SPIEL VERLOREN!"; //Nachricht wird angezeigt
-    turnCounter.innerHTML = ":("; //Nachricht wird im Counter angezeigt
+    instructions.innerHTML = "SPIEL VERLOREN!";
+    turnCounter.innerHTML = ":(";
     setTimeout(() => {
         clearColor();
     }, 800);
     on = false;
-    win = false;
+    win = false; //Spiel verloren
 }
 //Hilfe durch https://github.com/beaucarnes/simon-game
 //# sourceMappingURL=script.js.map

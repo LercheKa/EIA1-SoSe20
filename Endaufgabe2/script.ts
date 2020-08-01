@@ -14,7 +14,7 @@ let buttonsounds: string[] = ["Sounds/A.mp3", "Sounds/C.mp3", "Sounds/F.mp3", "S
 
 //Diese Booleans geben an, welcher Schwierigkeitsgrad gewählt wurde
 let easychosen: boolean;
-let advancedchosen: boolean;
+let mediumchosen: boolean;
 let hardchosen: boolean;
 let extremechosen: boolean;
 
@@ -35,7 +35,7 @@ const progressbar: HTMLElement = document.querySelector(".progress-bar");
 
 //Für die Schwierigkeitsgradbuttons
 const diffEasy: HTMLElement = document.querySelector("#difficultyeasy");
-const diffAdvanced: HTMLElement = document.querySelector("#difficultyadvanced");
+const diffmedium: HTMLElement = document.querySelector("#difficultymedium");
 const diffHard: HTMLElement = document.querySelector("#difficultyhard");
 const diffextreme: HTMLElement = document.querySelector("#difficultyextreme");
 
@@ -46,10 +46,10 @@ var i: number;
 
 //EINFACH
 
-diffEasy.addEventListener("click", function (): void { //Wenn der Button mit Schwierigkeit EINFACH geklickt wird,startet das Spiel
+diffEasy.addEventListener("click", function (): void { //Wenn der Button mit Schwierigkeit EINFACH geklickt wird, startet das Spiel
     on = true; //Das Spiel läuft
     easychosen = true;
-    advancedchosen = false;
+    mediumchosen = false;
     hardchosen = false;
     extremechosen = false;
     playeasy();
@@ -58,13 +58,13 @@ diffEasy.addEventListener("click", function (): void { //Wenn der Button mit Sch
 );
 
 function playeasy(): void {
-  win = false; //Alle Variablen werden erstmal zurückgesetzt falls von vorherigen Runden noch die Reihenfolge gespeichert ist etc.
-  compOrder = []; //Array in dem die willkürliche Reihenfolge gespeichert wird ist leer
+  win = false; //Alle Variablen werden erstmal zurückgesetzt, falls von vorherigen Runden noch die Reihenfolge gespeichert ist
+  compOrder = []; //Array, in dem die Reihenfolge gespeichert wird, ist leer
   playerOrder = [];
   flash = 0; //Noch kein Button hat aufgeleuchtet
   intervalId = 0;
-  turn = 1; //Erste Runde
-  turnCounter.innerHTML = "1"; //Counter stellt sich auf 1, da erste Runde
+  turn = 1; //Erster Sound
+  turnCounter.innerHTML = "1"; //Counter stellt sich auf 1
   good = true; //der Spieler hat noch nichts falsches gedrückt
 
   for ( i = 0; i < 5; i++) { //5 Zahlen werden erstellt
@@ -77,17 +77,17 @@ function playeasy(): void {
 
 //MITTEL
 
-diffAdvanced.addEventListener("click", function (): void {
+diffmedium.addEventListener("click", function (): void {
   on = true; //Das Spiel ist am laufen
   easychosen = false;
-  advancedchosen = true;
+  mediumchosen = true;
   hardchosen = false;
   extremechosen = false;
-  playadvanced();
+  playmedium();
 }
 });
 
-function playadvanced(): void {
+function playmedium(): void {
 win = false;
 compOrder = [];
 playerOrder = [];
@@ -110,7 +110,7 @@ intervalId = setInterval(gameTurn, 800);
 diffHard.addEventListener("click", function (): void {
   on = true;
   easychosen = false;
-  advancedchosen = false;
+  mediumchosen = false;
   hardchosen = true;
   extremechosen = false;
   playhard();
@@ -140,7 +140,7 @@ intervalId = setInterval(gameTurn, 800);
 diffextreme.addEventListener("click", function (): void {
   on = true;
   easychosen = false;
-  advancedchosen = false;
+  mediumchosen = false;
   hardchosen = false;
   extremechosen = true;
   playextreme();
@@ -355,7 +355,7 @@ function check(): void {
     winGame(); //Spiel gewonnen für Level EINFACH
   }
 
-  if (playerOrder.length == 15 && good && advancedchosen ) { 
+  if (playerOrder.length == 15 && good && mediumchosen ) { 
     winGame(); //Spiel gewonnen für Level MITTEL
   }
 
@@ -400,16 +400,16 @@ function winGame(): void {
 //FUNKTION FÜR VERLIEREN DES SPIELS
 
 function loseGame(): void {
-  flashColor(); //Alle Buttons leuchten auf
-  let sound: HTMLAudioElement = new Audio(buttonsounds[6]); //Sound wird abgespielt
+  flashColor();
+  let sound: HTMLAudioElement = new Audio(buttonsounds[6]);
   sound.play();
-  instructions.innerHTML = "SPIEL VERLOREN!"; //Nachricht wird angezeigt
-  turnCounter.innerHTML = ":("; //Nachricht wird im Counter angezeigt
+  instructions.innerHTML = "SPIEL VERLOREN!";
+  turnCounter.innerHTML = ":(";
   setTimeout(() => { 
       clearColor();
     },       800);
   on = false;
-  win = false;
+  win = false; //Spiel verloren
 
 }
 
