@@ -37,11 +37,15 @@ const diffextreme = document.querySelector("#difficultyextreme");
 var i;
 //EINFACH
 diffEasy.addEventListener("click", function () {
+<<<<<<< HEAD
     diffEasy.style.boxShadow = "0px 0px 15px 3px white"; //Gibt dem gewählten Schwierigkeitsgrad einen Schatten
     diffmedium.style.boxShadow = "none"; //Entfernt gegebenfalls den Schatten vom Schwierigkeitsgrad, der nicht gewählt wurde
     diffHard.style.boxShadow = "none";
     diffextreme.style.boxShadow = "none";
     on = true; //Spiel läuft
+=======
+    on = true; //Das Spiel läuft
+>>>>>>> parent of c759bfc... Shadow
     easychosen = true;
     mediumchosen = false;
     hardchosen = false;
@@ -58,6 +62,7 @@ function playeasy() {
     turnCounter.innerHTML = "1"; //Counter stellt sich auf 1
     mistake = true; //Spieler hat noch nichts falsches gedrückt
     for (i = 0; i < 5; i++) { //5 Zahlen werden erstellt
+<<<<<<< HEAD
         compOrder.push(Math.floor(Math.random() * 5) + 1); //Erstellt eine willkürliche Zahl zwischen eins und fünf und pusht diese Reihenfolge dann in das dafür vorgesehene Array
     }
     compTurn = true; //Computer startet und beginnt den Ton zu spielen
@@ -70,6 +75,16 @@ diffmedium.addEventListener("click", function () {
     diffHard.style.boxShadow = "none";
     diffextreme.style.boxShadow = "none";
     on = true; //Das Spiel läuft
+=======
+        compOrder.push(Math.floor(Math.random() * 5) + 1); // erstellt eine willkürliche Zahl zwischen eins und fünf und pusht diese Reihenfolge dann in das dafür vorgesehene Array
+    }
+    compTurn = true; // der Computer startet und beginnt den Ton zu spielen
+    intervalId = setInterval(gameTurn, 800); //die Funktion wird alle 800ms aufgerufen: Der Computer spielt einen Ton alle 800ms
+}
+//MITTEL
+diffmedium.addEventListener("click", function () {
+    on = true; //Das Spiel ist am laufen
+>>>>>>> parent of c759bfc... Shadow
     easychosen = false;
     mediumchosen = true;
     hardchosen = false;
@@ -93,10 +108,6 @@ function playmedium() {
 }
 //SCHWER
 diffHard.addEventListener("click", function () {
-    diffEasy.style.boxShadow = "none";
-    diffmedium.style.boxShadow = "none";
-    diffHard.style.boxShadow = "0px 0px 15px 3px white"; //Schatten bei SCHWER
-    diffextreme.style.boxShadow = "none";
     on = true;
     easychosen = false;
     mediumchosen = false;
@@ -112,8 +123,13 @@ function playhard() {
     intervalId = 0;
     turn = 1;
     turnCounter.innerHTML = "1";
+<<<<<<< HEAD
     mistake = true;
     for (i = 0; i < 25; i++) { //Es werden 25 Zahlen erstellt
+=======
+    good = true;
+    for (i = 0; i < 25; i++) { //es werden 25 Zahlen erstellt
+>>>>>>> parent of c759bfc... Shadow
         compOrder.push(Math.floor(Math.random() * 5) + 1);
     }
     compTurn = true;
@@ -121,10 +137,6 @@ function playhard() {
 }
 //HARDCORE
 diffextreme.addEventListener("click", function () {
-    diffEasy.style.boxShadow = "none";
-    diffmedium.style.boxShadow = "none";
-    diffHard.style.boxShadow = "none";
-    diffextreme.style.boxShadow = "0px 0px 15px 3px white"; //Schatten bei HARDCORE
     on = true;
     easychosen = false;
     mediumchosen = false;
@@ -148,10 +160,10 @@ function playextreme() {
     intervalId = setInterval(gameTurn, 800);
 }
 function gameTurn() {
-    on = false; //Spieler kann keine Buttons drücken
-    if (flash == turn) { //Wenn die Anzahl der gespielten Töne mit der Runde übereinstimmt, ist der Computer fertig und der Spieler ist dran 
-        clearInterval(intervalId); //Abspielen des Sounds stoppt
-        compTurn = false; //Computer ist nicht mehr dran
+    on = false; //der Spieler kann keine Buttons drücken
+    if (flash == turn) { //Wenn die Anzahl der gespielten Töne mit der Runde übereinstimmt. Ist der Computer fertig und der Spieler ist an der Reihe 
+        clearInterval(intervalId); //Abspielen der Samples stoppt
+        compTurn = false; //Computer ist nichtmehr an der Reihe
         instructions.innerHTML = "WIEDERHOLE DEN SOUND!";
         on = true; //Jetzt kann der Spieler drücken
     }
@@ -159,11 +171,11 @@ function gameTurn() {
         instructions.innerHTML = "PASS AUF!";
         setTimeout(function () {
             if (compOrder[flash] == 1)
-                topleftbutton(); //Wenn die erste Stelle im Array eins entspricht, wird Funktion 1 ausgeführt
+                topleftbutton(); //Wenn die erste Stelle im Array eins entspricht, wird funktion one ausgeführt
             if (compOrder[flash] == 2)
-                toprightbutton(); //Wenn die erste Stelle im Array zwei entspricht, wird Funktion 2 ausgeführt
+                toprightbutton(); //Wenn die erste Stelle im Array zwei entspricht, -||-
             if (compOrder[flash] == 3)
-                bottomleftbutton(); // -||-
+                bottomleftbutton();
             if (compOrder[flash] == 4)
                 bottomrightbutton();
             if (compOrder[flash] == 5)
@@ -175,12 +187,13 @@ function gameTurn() {
 //FUNKTIONEN FÜR DIE BUTTONS, WENN DER COMPUTER SIE ABSPIELT (SOUND UND LIGHTFLASH)
 function topleftbutton() {
     if (noise) {
-        // Spielt den jeweiligen Sound ab
+        /*let audio:  = document.getElementById("clip1"); // Spielt den jeweiligen Sound ab
+        audio.play();*/
         let sound = new Audio(buttonsounds[0]);
         sound.play();
     }
-    noise = true; //Wenn der Ton gespielt wird
-    topLeft.style.backgroundColor = "white"; //leuchtet der Button
+    noise = true; //wenn der Ton gespielt wird
+    topLeft.style.backgroundColor = "white"; //scheint das Licht auf
     setTimeout(() => {
         clearColor();
     }, 300);
