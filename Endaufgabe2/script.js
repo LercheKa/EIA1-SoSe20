@@ -4,13 +4,13 @@ let compOrder = []; //Array in der die vom Computer generierte Reihenfolge der a
 let playerOrder = []; //Array in der die vom Spieler eingegebene Reihenfolge gespeichert wird
 let flash; //Anzahl der aufleuchtenden Buttons
 let turn; //Gibt an in welcher Runde sich der Spieler befindet
-let good; //Gibt an ob der Nutzter Fehler macht (false) oder nicht (true)
+let mistake; //Gibt an ob der Nutzter Fehler macht (false) oder nicht (true)
 let compTurn; //Gibt an ob der Computer an der Reihe ist die Reihenfolge vor zu spielen oder nicht (dann ist der Nutzer dran)
 let intervalId;
 let noise = true; //Gibt an ob die Buttons einen Ton abspielen sollen oder nicht
 let on = false; //Gibt an ob das Spiel an ist. Der Spieler soll nur klicken können wenn on, true ist.
 let win; //Gibt an ob der Spieler das Spiel gewonnen hat oder nicht
-let buttonsounds = ["sounds/A.mp3", "sounds/C.mp3", "sounds/F.mp3", "sounds/G.mp3", "sounds/hihat.mp3", "sounds/winningsound.mp3", "sounds/failsound.mp3"];
+let buttonsounds = ["sounds/A.mp3", "sounds/C.mp3", "sounds/F.mp3", "sounds/G.mp3", "sounds/hihat.mp3", "sounds/winsound.mp3", "sounds/losesound.mp3"];
 //Array für alle Sounds
 //Diese Booleans geben an, welcher Schwierigkeitsgrad gewählt wurde
 let easychosen;
@@ -18,18 +18,17 @@ let mediumchosen;
 let hardchosen;
 let extremechosen;
 //BUTTONSELEKTION
-//Für den Counter
+//Counter
 const turnCounter = document.querySelector("#turn");
 const instructions = document.querySelector("#instruction");
-//Für die Buttons
+//Buttons
 const topLeft = document.querySelector("#topleft");
 const topRight = document.querySelector("#topright");
 const bottomLeft = document.querySelector("#bottomleft");
 const bottomRight = document.querySelector("#bottomright");
 const innerCircle = document.querySelector("#inner-circle");
 const reloadbutton = document.querySelector("#reload");
-const progressbar = document.querySelector(".progress-bar");
-//Für die Schwierigkeitsgradbuttons
+//Schwierigkeitsgradbuttons
 const diffEasy = document.querySelector("#difficultyeasy");
 const diffmedium = document.querySelector("#difficultymedium");
 const diffHard = document.querySelector("#difficultyhard");
@@ -42,7 +41,7 @@ diffEasy.addEventListener("click", function () {
     diffmedium.style.boxShadow = "none"; //Entfernt gegebenfalls den Schatten vom Schwierigkeitsgrad, der nicht gewählt wurde
     diffHard.style.boxShadow = "none";
     diffextreme.style.boxShadow = "none";
-    on = true; //Das Spiel läuft
+    on = true; //Spiel läuft
     easychosen = true;
     mediumchosen = false;
     hardchosen = false;
@@ -57,12 +56,12 @@ function playeasy() {
     intervalId = 0;
     turn = 1; //Erster Sound
     turnCounter.innerHTML = "1"; //Counter stellt sich auf 1
-    good = true; //der Spieler hat noch nichts falsches gedrückt
+    mistake = true; //Spieler hat noch nichts falsches gedrückt
     for (i = 0; i < 5; i++) { //5 Zahlen werden erstellt
-        compOrder.push(Math.floor(Math.random() * 5) + 1); // Erstellt eine willkürliche Zahl zwischen eins und fünf und pusht diese Reihenfolge dann in das dafür vorgesehene Array
+        compOrder.push(Math.floor(Math.random() * 5) + 1); //Erstellt eine willkürliche Zahl zwischen eins und fünf und pusht diese Reihenfolge dann in das dafür vorgesehene Array
     }
     compTurn = true; //Computer startet und beginnt den Ton zu spielen
-    intervalId = setInterval(gameTurn, 800); //Die Funktion wird alle 800ms aufgerufen: Der Computer spielt einen Ton alle 800ms
+    intervalId = setInterval(gameTurn, 800); //Funktion wird alle 800ms aufgerufen: Der Computer spielt einen Ton alle 800ms
 }
 //MITTEL
 diffmedium.addEventListener("click", function () {
@@ -70,7 +69,7 @@ diffmedium.addEventListener("click", function () {
     diffmedium.style.boxShadow = "0px 0px 15px 3px white"; //Schatten bei MEDIUM
     diffHard.style.boxShadow = "none";
     diffextreme.style.boxShadow = "none";
-    on = true; //Das Spiel ist am laufen
+    on = true; //Das Spiel läuft
     easychosen = false;
     mediumchosen = true;
     hardchosen = false;
@@ -85,7 +84,7 @@ function playmedium() {
     intervalId = 0;
     turn = 1;
     turnCounter.innerHTML = "1";
-    good = true;
+    mistake = true;
     for (i = 0; i < 15; i++) { //15 Zahlen werden erstellt
         compOrder.push(Math.floor(Math.random() * 5) + 1);
     }
@@ -113,7 +112,7 @@ function playhard() {
     intervalId = 0;
     turn = 1;
     turnCounter.innerHTML = "1";
-    good = true;
+    mistake = true;
     for (i = 0; i < 25; i++) { //Es werden 25 Zahlen erstellt
         compOrder.push(Math.floor(Math.random() * 5) + 1);
     }
@@ -141,7 +140,7 @@ function playextreme() {
     intervalId = 0;
     turn = 1;
     turnCounter.innerHTML = "1";
-    good = true;
+    mistake = true;
     for (i = 0; i < 35; i++) { //35 Zahlen werden generiert
         compOrder.push(Math.floor(Math.random() * 5) + 1);
     }
@@ -309,24 +308,24 @@ innerCircle.addEventListener("click", function () {
 //VERGLEICH VON COMPUTEREINGABE UND NUTZEREINGABE
 function check() {
     if (playerOrder[playerOrder.length - 1] !== compOrder[playerOrder.length - 1]) //Computer vergleicht das Array mit der Reihenfolge des Computers mit dem Array der Spielereingabe
-        good = false; //wenn sie nicht übereinstimmen ist das boolean falsch
-    if (playerOrder.length == 5 && good && easychosen) { //Wenn nach 5 Runden vom Nutzer alles richtig gedrückt wurde und EINFACH gewählt wurde, dann ist das Spiel gewonnen
+        mistake = false; //wenn sie nicht übereinstimmen ist das boolean falsch
+    if (playerOrder.length == 5 && mistake && easychosen) { //Wenn nach 5 Runden vom Nutzer alles richtig gedrückt wurde und EINFACH gewählt wurde, dann ist das Spiel gewonnen
         winGame(); //Spiel gewonnen für Level EINFACH
     }
-    if (playerOrder.length == 15 && good && mediumchosen) {
+    if (playerOrder.length == 15 && mistake && mediumchosen) {
         winGame(); //Spiel gewonnen für Level MITTEL
     }
-    if (playerOrder.length == 25 && good && hardchosen) {
+    if (playerOrder.length == 25 && mistake && hardchosen) {
         winGame(); //Spiel gewonnen für Level SCHWER
     }
-    if (playerOrder.length == 35 && good && extremechosen) {
+    if (playerOrder.length == 35 && mistake && extremechosen) {
         winGame(); //Spiel gewonnen für Level HARDCORE
     }
-    if (good == false) { //Wenn der Spieler einen Fehler macht, also das boolean falsch ist
+    if (mistake == false) { //Wenn der Spieler einen Fehler macht, also das boolean falsch ist
         loseGame(); //wird die Verloren Funktion abgespielt
         noise = false; //Beim Aufleuchten der Buttons sollen keine Töne abgespielt werden
     }
-    if (turn == playerOrder.length && good && !win) {
+    if (turn == playerOrder.length && mistake && !win) {
         turn++;
         playerOrder = [];
         compTurn = true;
@@ -335,7 +334,7 @@ function check() {
         intervalId = setInterval(gameTurn, 800);
     }
 }
-//FUNKTION FÜR GEWINNEN DES SPIELS
+//FUNKTION FÜR GEWINNEN
 function winGame() {
     flashColor(); //Alle Buttons leuchten auf
     let sound = new Audio(buttonsounds[5]); //Sound wird abgespielt
@@ -345,7 +344,7 @@ function winGame() {
     on = false; //Spiel schaltet sich aus, der Spieler kann also keine Knöpfe mehr drücken
     win = true; //Spiel gewonnen
 }
-//FUNKTION FÜR VERLIEREN DES SPIELS
+//FUNKTION FÜR VERLIEREN
 function loseGame() {
     flashColor();
     let sound = new Audio(buttonsounds[6]);
