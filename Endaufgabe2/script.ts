@@ -22,7 +22,7 @@ let extremechosen: boolean;
 
 //Counter
 const turnCounter: HTMLElement = document.querySelector("#turn");
-const message: HTMLElement = document.querySelector("#instruction");
+const message: HTMLElement = document.querySelector("#message");
 //Buttons
 const topLeft: HTMLElement = document.querySelector("#topleft");
 const topRight: HTMLElement = document.querySelector("#topright");

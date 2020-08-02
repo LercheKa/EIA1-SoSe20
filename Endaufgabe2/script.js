@@ -20,7 +20,7 @@ let extremechosen;
 //BUTTONSELEKTION
 //Counter
 const turnCounter = document.querySelector("#turn");
-const message = document.querySelector("#instruction");
+const message = document.querySelector("#message");
 //Buttons
 const topLeft = document.querySelector("#topleft");
 const topRight = document.querySelector("#topright");
