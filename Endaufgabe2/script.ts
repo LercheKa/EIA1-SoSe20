@@ -1,8 +1,8 @@
 //VARIABLEN WERDEN DEKLARIERT
-let compOrder: number[] = []; //Array, wo die vom Computer generierte Reihenfolge gespeichert wird
-let playerOrder: number[] = []; //Array, wo die vom Spieler eingegebene Reihenfolge gespeichert wird
+let compOrder: number[] = []; //Array in der die vom Computer generierte Reihenfolge der aufleuchtenden Buttons gespeichert werden
+let playerOrder: number[] = []; //Array in der die vom Spieler eingegebene Reihenfolge gespeichert wird
 let flash: number; //Anzahl der aufleuchtenden Buttons
-let turn: number; //Gibt an wie viele Sounds schon gespielt worden sind
+let turn: number; //Gibt an in welcher Runde sich der Spieler befindet
 let mistake: boolean; //Gibt an ob der Nutzter Fehler macht (false) oder nicht (true)
 let compTurn: boolean; //Gibt an ob der Computer an der Reihe ist oder nicht
 let intervalId: number;
@@ -42,15 +42,11 @@ var i: number;
 
 //EINFACH
 diffEasy.addEventListener("click", function (): void { //Wenn der Button mit Schwierigkeit EINFACH geklickt wird, startet das Spiel
-<<<<<<< HEAD
     diffEasy.style.boxShadow = "0px 0px 15px 3px white"; //Gibt dem gewählten Schwierigkeitsgrad einen Schatten
     diffmedium.style.boxShadow = "none"; //Entfernt gegebenfalls den Schatten vom Schwierigkeitsgrad, der nicht gewählt wurde
     diffHard.style.boxShadow = "none";
     diffextreme.style.boxShadow = "none";
     on = true; //Spiel läuft
-=======
-    on = true; //Das Spiel läuft
->>>>>>> parent of c759bfc... Shadow
     easychosen = true;
     mediumchosen = false;
     hardchosen = false;
@@ -71,32 +67,20 @@ function playeasy(): void {
   mistake = true; //Spieler hat noch nichts falsches gedrückt
 
   for ( i = 0; i < 5; i++) { //5 Zahlen werden erstellt
-<<<<<<< HEAD
     compOrder.push(Math.floor(Math.random() * 5) + 1); //Erstellt eine zufällige Zahl zwischen eins und fünf und pusht diese Reihenfolge dann in das dafür vorgesehene Array
-=======
-    compOrder.push(Math.floor(Math.random() * 5) + 1); // erstellt eine willkürliche Zahl zwischen eins und fünf und pusht diese Reihenfolge dann in das dafür vorgesehene Array
->>>>>>> parent of c759bfc... Shadow
   }
-  compTurn = true; // der Computer startet und beginnt den Ton zu spielen
+  compTurn = true; //Computer startet und beginnt den Ton zu spielen
 
-<<<<<<< HEAD
   intervalId = setInterval(gameTurn, 800); //Computer spielt einen Ton alle 800ms
-=======
-  intervalId = setInterval(gameTurn, 800); //die Funktion wird alle 800ms aufgerufen: Der Computer spielt einen Ton alle 800ms
->>>>>>> parent of c759bfc... Shadow
 }
 
 //MITTEL
 diffmedium.addEventListener("click", function (): void {
-<<<<<<< HEAD
   diffEasy.style.boxShadow = "none";
   diffmedium.style.boxShadow = "0px 0px 15px 3px white"; //Schatten bei MEDIUM
   diffHard.style.boxShadow = "none";
   diffextreme.style.boxShadow = "none";
   on = true;
-=======
-  on = true; //Das Spiel ist am laufen
->>>>>>> parent of c759bfc... Shadow
   easychosen = false;
   mediumchosen = true;
   hardchosen = false;
@@ -125,6 +109,10 @@ intervalId = setInterval(gameTurn, 800);
 
 //SCHWER
 diffHard.addEventListener("click", function (): void {
+  diffEasy.style.boxShadow = "none";
+  diffmedium.style.boxShadow = "none";
+  diffHard.style.boxShadow = "0px 0px 15px 3px white"; //Schatten bei SCHWER
+  diffextreme.style.boxShadow = "none";
   on = true;
   easychosen = false;
   mediumchosen = false;
@@ -144,7 +132,7 @@ turn = 1;
 turnCounter.innerHTML = "1";
 mistake = true;
 
-for ( i = 0; i < 25; i++) { //es werden 25 Zahlen erstellt
+for ( i = 0; i < 25; i++) { //Es werden 25 Zahlen erstellt
   compOrder.push(Math.floor(Math.random() * 5) + 1);
 }
 compTurn = true;
@@ -154,6 +142,10 @@ intervalId = setInterval(gameTurn, 800);
 
 //HARDCORE
 diffextreme.addEventListener("click", function (): void {
+  diffEasy.style.boxShadow = "none";
+  diffmedium.style.boxShadow = "none";
+  diffHard.style.boxShadow = "none";
+  diffextreme.style.boxShadow = "0px 0px 15px 3px white"; //Schatten bei HARDCORE
   on = true;
   easychosen = false;
   mediumchosen = false;
@@ -183,19 +175,12 @@ intervalId = setInterval(gameTurn, 800);
 
 
 function gameTurn(): void {
-  on = false; //der Spieler kann keine Buttons drücken
+  on = false; //Spieler kann keine Buttons drücken
 
-<<<<<<< HEAD
   if (flash == turn) { //Wenn die Anzahl der gespielten Töne mit der Runde übereinstimmt, ist der Computer fertig und der Spieler ist dran 
     clearInterval(intervalId); //Abspielen des Sounds stoppt
     compTurn = false; //Computer ist nicht mehr dran
     message.innerHTML = "WIEDERHOLE DEN SOUND!";
-=======
-  if (flash == turn) { //Wenn die Anzahl der gespielten Töne mit der Runde übereinstimmt. Ist der Computer fertig und der Spieler ist an der Reihe 
-    clearInterval(intervalId); //Abspielen der Samples stoppt
-    compTurn = false; //Computer ist nichtmehr an der Reihe
-    instructions.innerHTML = "WIEDERHOLE DEN SOUND!";
->>>>>>> parent of c759bfc... Shadow
     on = true; //Jetzt kann der Spieler drücken
   }
 
@@ -203,9 +188,9 @@ function gameTurn(): void {
     
     message.innerHTML = "PASS AUF!";
     setTimeout( function(): void { //
-      if (compOrder[flash] == 1) topleftbutton();  //Wenn die erste Stelle im Array eins entspricht, wird funktion one ausgeführt
-      if (compOrder[flash] == 2) toprightbutton(); //Wenn die erste Stelle im Array zwei entspricht, -||-
-      if (compOrder[flash] == 3) bottomleftbutton();
+      if (compOrder[flash] == 1) topleftbutton();  //Wenn die erste Stelle im Array eins entspricht, wird Funktion 1 ausgeführt
+      if (compOrder[flash] == 2) toprightbutton(); //Wenn die erste Stelle im Array zwei entspricht, wird Funktion 2 ausgeführt
+      if (compOrder[flash] == 3) bottomleftbutton(); // -||-
       if (compOrder[flash] == 4) bottomrightbutton();
       if (compOrder[flash] == 5) innerbutton();
       flash++;
@@ -217,13 +202,12 @@ function gameTurn(): void {
 //SOUND UND LICHT, WENN DER COMPUTER SIE ABSPIELT
 function topleftbutton(): void { //Button oben links
   if (noise) {
-    /*let audio:  = document.getElementById("clip1"); // Spielt den jeweiligen Sound ab
-    audio.play();*/
+    // Spielt den jeweiligen Sound ab
     let sound: HTMLAudioElement = new Audio(buttonsounds[0]);
     sound.play();
   }
-  noise = true; //wenn der Ton gespielt wird
-  topLeft.style.backgroundColor = "white"; //scheint das Licht auf
+  noise = true; //Wenn der Ton gespielt wird
+  topLeft.style.backgroundColor = "white"; //leuchtet der Button
   setTimeout(() => {
     clearColor();
   },         300);
