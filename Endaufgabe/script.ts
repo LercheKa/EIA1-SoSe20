@@ -165,7 +165,7 @@ turn = 1;
 turnCounter.innerHTML = "1"; 
 mistake = true;
 
-for ( i = 0; i < 35; i++) { //35 Zahlen werden generiert
+for ( i = 0; i < 100; i++) { //35 Zahlen werden generiert
   compOrder.push(Math.floor(Math.random() * 5) + 1);
 }
 compTurn = true;
